@@ -1,0 +1,43 @@
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5">Laboratorio App</h5>
+              <form [formGroup]="createPatientForm" (ngSubmit)="createPatient(createPatientForm.value)">
+  
+                <div class="form-floating mb-3">
+                  <input formControlName="id"  type="number" class="form-control" id="floatingInputId" placeholder="id" required autofocus>
+                  <label for="floatingInputId">Cédula</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input formControlName="sugar" type="number" class="form-control" id="floatingInputSugar" placeholder="sugar" required autofocus>
+                  <label for="floatingInputSugar">Azúcar</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input formControlName="fat" type="number" class="form-control" id="floatingFat" placeholder="fat" required autofocus>
+                  <label for="floatingFat">Grasa</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input formControlName="oxygen" type="number" class="form-control" id="floatingOxygen" placeholder="oxygen" required autofocus>
+                  <label for="floatingOxygen">Oxígeno</label>
+                </div>
+  
+                <div class="d-grid mb-2">
+                  <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" [disabled]="createPatientForm.invalid" >Crear Paciente</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

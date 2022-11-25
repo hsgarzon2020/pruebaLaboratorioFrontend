@@ -1,0 +1,36 @@
+<div class="container">
+
+    <!-- Page Heading -->
+    <h1 class="my-4">Lista de pacientes</h1>
+    <div *ngFor="let patient of patientList; index as i" class="card">
+        <div class="card-body">
+            <h4 class="card-title">
+                <a>Cédula</a>
+            </h4>
+            <p class="card-text">{{patient.id}} </p>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a>Azúcar</a>
+            </h4>
+            <p class="card-text">{{patient.sugar}}</p>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a>Grasa</a>
+            </h4>
+            <p class="card-text">{{patient.fat}} </p>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a>Oxígeno</a>
+            </h4>
+            <p class="card-text">{{patient.oxygen}}</p>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a>Riesgo</a>
+            </h4>
+            <p class="card-text">{{patient.risk}} </p>
+        </div>
+    </div>
